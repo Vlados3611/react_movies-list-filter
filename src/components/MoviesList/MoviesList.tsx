@@ -12,6 +12,7 @@ export const MoviesList: React.FC<Props> = ({ movies, searchMovie }) => {
   const filteredMovieList = movies.filter(
     (movie) => (
       movie.title.toLowerCase().includes(searchMovie.toLowerCase())
+      || movie.description.toLowerCase().includes(searchMovie.toLowerCase())
     ),
   );
 
